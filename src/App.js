@@ -42,7 +42,7 @@ class App extends Component {
 
     return (
       <section className='container'>
-        <div className="App" className="posts">
+        <div className="posts">
         { posts.map(post => (
           <div className='post' alt={post.title}>
             <img src={post.cover}></img>
