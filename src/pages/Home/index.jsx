@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { loadPosts } from '../../utils/load-posts';
 import { Posts } from '../../components/Posts';
 import { Button } from '../../components/Button';
+import { TextInput } from '../../components/TextInput';
 
 class Home extends Component {
   state = {
@@ -61,17 +62,12 @@ class Home extends Component {
 
     return (
       <section className='container'>
-        {!!searchValue && (
-          <>
-            <h1>Search value: {searchValue}</h1> <br />
-          </>
-        )}
-        <input
-          onChange={this.handleChange}
-          value={searchValue}
-          type="search"
-        />
-        <br /> <br />
+        <div className='search-container'>
+          {!!searchValue && (
+            <h1>Search value: {searchValue}</h1>
+          )}
+          <TextInput searchValue={searchValue} handleChange={this.handleChange} />
+        </div>
         <Posts posts={filteredPosts} />
         <div className="button-container">
           {!searchValue && (
