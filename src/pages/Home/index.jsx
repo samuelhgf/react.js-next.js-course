@@ -1,4 +1,4 @@
-import './styles.css';
+import '../../styles/global-styles.css';
 import { Component } from 'react';
 import { loadPosts } from '../../utils/load-posts';
 import { Posts } from '../../components/Posts';
